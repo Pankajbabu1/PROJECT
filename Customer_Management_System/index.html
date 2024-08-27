@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <u><h2>Customer Management System :=></h2></u>
+    <table>
+      
+        <tr>
+            <td colspan="2"><label for="textId"> Id :</label></td>
+            <td colspan="2"><input type="text" name=" " id=" textId" /></td>
+        </tr>
+  
+        <tr>
+            <td colspan="2"><label for="textName">Name :</label></td>
+            <td colspan="2"><input type="text" name=" " id=" textName" /></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><label for="textAddress"> Address :</label></td>
+            <td colspan="2"><input type="text" name=" " id=" textAddress" /></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><label for="textMobile"> Mobile No:</label></td>
+            <td colspan="2"><input type="text" name=" " id=" textMobile" /></td>
+        </tr>
+
+       <tr>
+        <td><input onclick="addCustomer_click()" type="button" value="Add Customer" /></td>
+
+        <td><input onclick="searchCustomer_click()" type="button" value="Search Customer" /></td>
+
+        <td><input onclick="deleteCustomer_click()" type="button" value="Delete Customer" /></td>
+
+        <td><input onclick="modifyCustomer_click()" type="button" value="Modify Customer" /></td>
+      </tr>
+
+   </table>
+
+   <div id="divCustomer"></div>
+</body>
+
+<script>
+
+    var varId=document.getElementById("textId");
+    var varName=document.getElementById("textName");
+    var varAddress=document.getElementById("textAddress");
+    var varMobile=document.getElementById("textMobile");
+    var varDiv=document.getElementById("divCustomer");
+
+    function addCustomer_click()
+    {
+        var id=varId.value;
+        id=parseInt(id);
+        var name=varName.value;
+        var address=varAddress.value;
+        var mobile=varMobile.value;
+
+        addCustomer(id,name,address,mobile);
+        varDiv.innerHTML=data;
+    }
+
+</script>
+</html>
